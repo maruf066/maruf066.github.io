@@ -9,7 +9,7 @@
     }
     nav .left a {
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.4rem; /* Your name size */
         white-space: nowrap;
         text-decoration: none;
         color: inherit;
@@ -17,11 +17,11 @@
     nav .right.desktop-nav {
         display: flex;
         align-items: center;
-        gap: 20px; /* Increased gap slightly for the cleaner look */
+        gap: 15px; /* Space between links */
         white-space: nowrap;
     }
     nav .right.desktop-nav a {
-        font-size: 1rem;
+        font-size: 1rem; /* Link size */
         text-decoration: none;
         color: inherit;
     }
@@ -40,8 +40,10 @@
     <!-- Desktop Menu -->
     <div class="right desktop-nav">
         <a href="{{ site.baseurl }}/"><span>Home</span></a>
-        <a href="{{ site.baseurl }}/experiences/"><span>Experiences</span></a>
+        <a href="{{ site.baseurl }}/education/"><span>Education</span></a>
+        <a href="{{ site.baseurl }}/research/"><span>Research</span></a>
         <a href="{{ site.baseurl }}/projects/"><span>Projects</span></a>
+        <a href="{{ site.baseurl }}/experiences/"><span>Experience</span></a>
         <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer"><span>Resume</span></a>
     </div>
 
@@ -53,8 +55,10 @@
     <!-- Mobile Menu -->
     <div class="mobile-nav">
         <a href="{{ site.baseurl }}/"><span>Home</span></a>
-        <a href="{{ site.baseurl }}/experiences/"><span>Experiences</span></a>
+        <a href="{{ site.baseurl }}/education/"><span>Education</span></a>
+        <a href="{{ site.baseurl }}/research/"><span>Research</span></a>
         <a href="{{ site.baseurl }}/projects/"><span>Projects</span></a>
+        <a href="{{ site.baseurl }}/experiences/"><span>Experience</span></a>
         <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer"><span>Resume</span></a>
     </div>
 </nav>
