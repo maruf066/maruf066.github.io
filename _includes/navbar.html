@@ -1,4 +1,49 @@
 <!-- _includes/nav.html -->
+<style>
+    /* This CSS ensures everything stays on one line */
+    nav {
+        display: flex;
+        justify-content: space-between; /* Pushes name left, links right */
+        align-items: center;
+        flex-wrap: nowrap; /* Prevents wrapping to a new line */
+        padding: 10px 20px;
+    }
+
+    /* Styling for your Name (Left side) */
+    nav .left a {
+        font-weight: bold;
+        font-size: 1.4rem; /* Makes your name slightly bigger */
+        white-space: nowrap; /* Keeps your name on a single line */
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Styling for the Links (Right side) */
+    nav .right.desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Space between each link */
+        white-space: nowrap;
+    }
+
+    nav .right.desktop-nav a {
+        font-size: 1rem; /* Normal size for the links */
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Keeps the mobile menu hidden on desktop */
+    .menu-toggle, .mobile-nav {
+        display: none;
+    }
+    
+    /* Show mobile menu button only on small screens */
+    @media (max-width: 900px) {
+        .desktop-nav { display: none !important; }
+        .menu-toggle { display: block; }
+    }
+</style>
+
 <nav>
     <div class="left">
         <a href="{{ site.baseurl }}/">{{site.name}}</a>
