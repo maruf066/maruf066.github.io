@@ -1,67 +1,69 @@
-<!-- Navigation Bar -->
+<!-- _includes/navbar.html -->
 <style>
-    /* Force the layout */
-    nav {
+    /* Force layout using a custom ID that template CSS won't override */
+    #custom-navbar {
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        background-color: #f8f9fa !important; /* Light gray background */
+        background-color: #f8f9fa !important;
         padding: 15px 40px !important;
         border-bottom: 1px solid #ddd !important;
-        font-family: Georgia, 'Times New Roman', serif !important; /* Serif font */
+        font-family: Georgia, 'Times New Roman', serif !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* Left Side: Avatar + Name */
-    nav .left {
+    #custom-navbar .nav-left {
         display: flex !important;
         align-items: center !important;
         gap: 15px !important;
     }
-    nav .left img {
+    
+    #custom-navbar .nav-left img {
         width: 40px !important;
         height: 40px !important;
-        border-radius: 50% !important; /* Circular image */
+        border-radius: 50% !important;
         object-fit: cover !important;
         display: block !important;
     }
-    nav .left a {
-        font-size: 1.4rem !important; /* Large name */
+    
+    #custom-navbar .nav-left a {
+        font-size: 1.4rem !important;
         font-weight: bold !important;
-        color: #000 !important; /* Black text */
+        color: #000 !important; /* Forces black text */
         text-decoration: none !important;
     }
 
-    /* Right Side: Navigation Links */
-    nav .right.desktop-nav {
+    #custom-navbar .nav-right {
         display: flex !important;
         align-items: center !important;
         gap: 25px !important;
     }
-    nav .right.desktop-nav a {
+    
+    #custom-navbar .nav-right a {
         font-size: 1rem !important;
-        color: #333 !important; /* Dark text */
+        color: #333 !important;
         text-decoration: none !important;
         font-family: Georgia, 'Times New Roman', serif !important;
     }
-    nav .right.desktop-nav a:hover {
+    
+    #custom-navbar .nav-right a:hover {
         text-decoration: underline !important;
     }
 </style>
 
-<nav>
-    <div class="left">
-        <!-- Your Profile Picture -->
+<div id="custom-navbar">
+    <div class="nav-left">
+        <!-- Ensure this path exactly matches your profile picture -->
         <img src="{{ site.baseurl }}/assets/images/profile-image/avatar.jpeg" alt="Profile">
         <a href="{{ site.baseurl }}/">MD MARUF AHMED</a>
     </div>
 
-    <div class="right desktop-nav">
+    <div class="nav-right">
         <a href="{{ site.baseurl }}/">Home</a>
         <a href="{{ site.baseurl }}/education/">Education</a>
         <a href="{{ site.baseurl }}/research/">Research</a>
         <a href="{{ site.baseurl }}/projects/">Projects</a>
         <a href="{{ site.baseurl }}/experiences/">Experiences</a>
     </div>
-</nav>
+</div>
