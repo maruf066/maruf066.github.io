@@ -1,1 +1,75 @@
+---
+layout: wrapper
+title: Experiences
+permalink: /experiences/
+---
 
+<style>
+  /* Full Width Banner */
+  .full-width-banner {
+    background-image: url('{{ site.baseurl }}/assets/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+  }
+  
+  .full-width-banner h1 {
+    color: white !important;
+    font-size: 4rem !important;
+    font-weight: normal !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    text-shadow: 2px 2px 10px rgba(0,0,0,1) !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .exp-container { max-width: 900px; margin: 60px auto 0 auto; padding: 0 20px; font-family: 'Poppins', sans-serif; color: #333; }
+  .exp-section-title { font-size: 1.8rem; color: #40b3a2; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-top: 50px; margin-bottom: 30px; font-family: Georgia, 'Times New Roman', serif; }
+  .exp-item { margin-bottom: 40px; }
+  .exp-item h3 { font-size: 1.3rem; font-weight: 600; margin: 0 0 5px 0; color: #000; }
+  .exp-item .meta { font-style: italic; color: #666; margin-bottom: 10px; font-family: Georgia, 'Times New Roman', serif; }
+  .exp-item p { font-size: 1.05rem; line-height: 1.6; color: #444; }
+  .exp-item ul { padding-left: 20px; }
+  .exp-item li { font-size: 1.05rem; line-height: 1.6; color: #444; margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .full-width-banner { height: 250px; padding-top: 80px; }
+    .full-width-banner h1 { font-size: 2.5rem !important; }
+  }
+</style>
+
+<div class="full-width-banner">
+  <h1>Experiences</h1>
+</div>
+
+<div class="exp-container">
+  <h2 class="exp-section-title">Professional Experience</h2>
+  <div class="exp-item">
+    <h3>[Job Title / Internship Role]</h3>
+    <p class="meta">[Company Name] | [Date - Date]</p>
+    <ul>
+      <li>Describe what you did and the impact you made.</li>
+      <li>Mention specific tools or software you used.</li>
+    </ul>
+  </div>
+
+  <h2 class="exp-section-title">Extracurricular Activities</h2>
+  <div class="exp-item">
+    <h3>[Club / Organization Name]</h3>
+    <p class="meta">[Your Role] | [Date - Present]</p>
+    <p>Describe your involvement, leadership, or achievements in this organization.</p>
+  </div>
+</div>
