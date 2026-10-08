@@ -7,7 +7,7 @@ permalink: /education/
 <style>
   /* Full Width Banner */
   .full-width-banner {
-    background-image: url('{{ site.baseurl }}/assets/images/education.jpg');
+    background-image: url('{{ site.baseurl }}/assets/images/Background.jpg');
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -17,12 +17,12 @@ permalink: /education/
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    margin-top: -85px; /* Pulls it up behind the transparent navbar */
-    padding-top: 85px; /* Pushes text down so navbar doesn't cover it */
+    margin-top: 0; /* Sits right under the fixed navbar */
+    padding-top: 100px; /* Pushes text down so it's visible below the navbar */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4); /* Slight dark overlay */
+    background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: multiply;
   }
   
@@ -36,79 +36,30 @@ permalink: /education/
     border-bottom: none !important;
   }
 
-  /* Content Container */
-  .edu-wrapper {
-    max-width: 900px;
-    margin: 60px auto 0 auto;
-    padding: 0 20px;
-    font-family: Georgia, 'Times New Roman', serif;
-  }
-
-  /* Individual Education Item */
-  .edu-row {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 60px;
-  }
-
-  /* Logo Column */
-  .edu-logo-col {
-    flex-shrink: 0;
-    width: 140px; 
-    display: flex;
-    justify-content: center;
-  }
-  .edu-logo-col img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  /* Text Column */
+  .edu-wrapper { max-width: 900px; margin: 60px auto 0 auto; padding: 0 20px; font-family: Georgia, 'Times New Roman', serif; }
+  .edu-row { display: flex; align-items: center; gap: 50px; margin-bottom: 60px; }
+  .edu-logo-col { flex-shrink: 0; width: 140px; display: flex; justify-content: center; }
+  .edu-logo-col img { width: 100%; height: auto; object-fit: contain; }
   .edu-text-col { flex-grow: 1; }
+  .edu-text-col h3 { margin: 0 0 10px 0; font-size: 1.3rem; font-weight: bold; color: #000; }
+  .edu-text-col p { margin: 0 0 8px 0; font-size: 1.1rem; color: #333; line-height: 1.5; }
+  .edu-text-col .date { font-style: italic; color: #555; }
   
-  .edu-text-col h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .edu-text-col p {
-    margin: 0 0 8px 0;
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.5;
-  }
-  
-  .edu-text-col .date {
-    font-style: italic;
-    color: #555;
-  }
-
-  /* Mobile Responsive */
   @media (max-width: 600px) {
-    .full-width-banner { height: 250px; margin-top: -65px; padding-top: 65px; }
+    .full-width-banner { height: 250px; padding-top: 80px; }
     .full-width-banner h1 { font-size: 2.5rem !important; }
     .edu-row { flex-direction: column; gap: 20px; text-align: center; }
     .edu-logo-col { width: 100px; }
   }
 </style>
 
-<!-- The Full Width Banner -->
 <div class="full-width-banner">
   <h1>Education</h1>
 </div>
 
-<!-- The Education Details -->
 <div class="edu-wrapper">
-  
-  <!-- Institution 1: CAFUC -->
   <div class="edu-row">
-    <div class="edu-logo-col">
-      <img src="{{ site.baseurl }}/assets/images/CAFUC LOGO.webp" alt="CAFUC Logo">
-    </div>
+    <div class="edu-logo-col"><img src="{{ site.baseurl }}/assets/images/CAFUC LOGO.webp" alt="CAFUC Logo"></div>
     <div class="edu-text-col">
       <h3>Bachelor of Engineering in Aircraft Manufacturing Engineering</h3>
       <p>Civil Aviation Flight University of China, College of Aeronautical Engineering, School of Aviation Engineering.</p>
@@ -116,28 +67,21 @@ permalink: /education/
     </div>
   </div>
 
-  <!-- Institution 2: SPI -->
   <div class="edu-row">
-    <div class="edu-logo-col">
-      <img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="SPI Logo">
-    </div>
+    <div class="edu-logo-col"><img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="SPI Logo"></div>
     <div class="edu-text-col">
       <h3>Diploma in Engineering in Mechanical Technology</h3>
       <p>Sylhet Polytechnic Institute — Department of Mechanical Engineering</p>
-      <p class="date">Sep 2017 – Jul 2022 (delayed due to COVID-19)</p>
+      <p class="date">Sep 2017 – Jul 2021 (delayed due to COVID-19)</p>
     </div>
   </div>
 
-  <!-- Institution 3: SSC -->
   <div class="edu-row">
-    <div class="edu-logo-col">
-      <img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="SSC Logo">
-    </div>
+    <div class="edu-logo-col"><img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="SSC Logo"></div>
     <div class="edu-text-col">
       <h3>Secondary School Certificate (SSC) in Science</h3>
       <p>Sylhet Govt. Model School &amp; College, Sylhet</p>
       <p class="date">Passing year: 2017</p>
     </div>
   </div>
-
 </div>
