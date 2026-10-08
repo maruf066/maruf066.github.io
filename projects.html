@@ -1,8 +1,168 @@
 ---
-
 layout: wrapper
+title: Projects & Research
 permalink: /projects/
-
 ---
 
-{% include projects.html%}
+<style>
+  .portfolio-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+
+  /* THIS IS THE MAIN TITLE THAT WAS CHANGED */
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .sub-section-title {
+    font-size: 1.8rem;
+    color: #40b3a2; /* Teal color */
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .portfolio-card {
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .portfolio-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .portfolio-content {
+    padding: 20px;
+  }
+
+  .portfolio-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #000;
+  }
+
+  .tags {
+    margin-bottom: 15px;
+  }
+
+  .tags span {
+    display: inline-block;
+    background-color: #f0f8f7;
+    color: #40b3a2;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  .portfolio-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .read-more {
+    color: #40b3a2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="portfolio-container">
+  
+  <!-- Main Heading Updated to Match Navbar -->
+  <h1 class="section-title">Projects & Research</h1>
+
+  <!-- ============================== -->
+  <!-- SECTION 1: RESEARCH            -->
+  <!-- ============================== -->
+  <h2 class="sub-section-title">Undergraduate Thesis / Research</h2>
+  
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <div class="portfolio-content">
+        <h3>[Your Thesis Title Will Go Here]</h3>
+        <div class="tags">
+          <span>Aerodynamics</span>
+          <span>Propulsion</span>
+        </div>
+        <p>This section is currently under development. I will be completing my undergraduate thesis in my final semester (Expected 2027). The research will focus on [Insert your specific aerospace interests here].</p>
+        <p><strong>Supervised by:</strong> To be determined</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- SECTION 2: PROJECTS            -->
+  <!-- ============================== -->
+  <h2 class="sub-section-title">Academic & Personal Projects</h2>
+
+  <div class="portfolio-grid">
+    <!-- Project 1 -->
+    <div class="portfolio-card">
+      <img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="Project Image"> <!-- Replace with your project image -->
+      <div class="portfolio-content">
+        <h3>Super Heavy Booster Catch (Demo)</h3>
+        <div class="tags">
+          <span>Structural analysis</span>
+          <span>Aerodynamic design</span>
+          <span>Propulsion system integration</span>
+          <span>Control Algorithm</span>
+        </div>
+        <p>Developing the Super Heavy booster catch project involves designing a robust launch tower with "chopstick" arms, advanced control systems for precise booster alignment, and integrating...</p>
+        <a href="#" class="read-more">Read more &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="portfolio-card">
+      <img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="Project Image"> <!-- Replace with your project image -->
+      <div class="portfolio-content">
+        <h3>Sonos Teardown</h3>
+        <div class="tags">
+          <span>drumel</span>
+          <span>microprobing</span>
+          <span>Electronics Teardown</span>
+          <span>PCB analysis</span>
+        </div>
+        <p>Conducted detailed teardown analysis of Sonos Era speaker, documenting internal components, driver configuration, and PCB design. Created technical documentation with photos and assembly insights.</p>
+        <a href="#" class="read-more">Read more &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+</div>
