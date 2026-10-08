@@ -5,23 +5,24 @@ permalink: /education/
 ---
 
 <style>
-  /* Force full width banner */
+  /* Full Width Banner */
   .full-width-banner {
     background-image: url('{{ site.baseurl }}/assets/images/education.jpg');
     background-size: cover;
     background-position: center;
-    height: 350px; /* Taller banner like the reference */
-    width: 100vw; /* Forces it to stretch full width */
+    height: 350px;
+    width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    margin-top: -50px; /* Pulls it up behind the navbar */
+    margin-top: -85px; /* Pulls it up behind the transparent navbar */
+    padding-top: 85px; /* Pushes text down so navbar doesn't cover it */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.4); /* Slight dark overlay */
     background-blend-mode: multiply;
   }
   
@@ -32,7 +33,7 @@ permalink: /education/
     font-family: Georgia, 'Times New Roman', serif !important;
     text-shadow: 2px 2px 10px rgba(0,0,0,1) !important;
     margin: 0 !important;
-    padding-top: 50px; /* Pushes text down so navbar doesn't cover it */
+    border-bottom: none !important;
   }
 
   /* Content Container */
@@ -43,6 +44,7 @@ permalink: /education/
     font-family: Georgia, 'Times New Roman', serif;
   }
 
+  /* Individual Education Item */
   .edu-row {
     display: flex;
     align-items: center;
@@ -50,6 +52,7 @@ permalink: /education/
     margin-bottom: 60px;
   }
 
+  /* Logo Column */
   .edu-logo-col {
     flex-shrink: 0;
     width: 140px; 
@@ -62,6 +65,7 @@ permalink: /education/
     object-fit: contain;
   }
 
+  /* Text Column */
   .edu-text-col { flex-grow: 1; }
   
   .edu-text-col h3 {
@@ -83,8 +87,9 @@ permalink: /education/
     color: #555;
   }
 
+  /* Mobile Responsive */
   @media (max-width: 600px) {
-    .full-width-banner { height: 250px; margin-top: -30px; }
+    .full-width-banner { height: 250px; margin-top: -65px; padding-top: 65px; }
     .full-width-banner h1 { font-size: 2.5rem !important; }
     .edu-row { flex-direction: column; gap: 20px; text-align: center; }
     .edu-logo-col { width: 100px; }
@@ -99,8 +104,11 @@ permalink: /education/
 <!-- The Education Details -->
 <div class="edu-wrapper">
   
+  <!-- Institution 1: CAFUC -->
   <div class="edu-row">
-    <div class="edu-logo-col"><img src="{{ site.baseurl }}/assets/images/CAFUC LOGO.webp" alt="CAFUC Logo"></div>
+    <div class="edu-logo-col">
+      <img src="{{ site.baseurl }}/assets/images/CAFUC LOGO.webp" alt="CAFUC Logo">
+    </div>
     <div class="edu-text-col">
       <h3>Bachelor of Engineering in Aircraft Manufacturing Engineering</h3>
       <p>Civil Aviation Flight University of China, School of Aviation Engineering</p>
@@ -108,8 +116,11 @@ permalink: /education/
     </div>
   </div>
 
+  <!-- Institution 2: SPI -->
   <div class="edu-row">
-    <div class="edu-logo-col"><img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="SPI Logo"></div>
+    <div class="edu-logo-col">
+      <img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="SPI Logo">
+    </div>
     <div class="edu-text-col">
       <h3>Diploma in Engineering in Mechanical Engineering</h3>
       <p>Sylhet Polytechnic Institute, Department of Mechanical Engineering</p>
@@ -117,8 +128,11 @@ permalink: /education/
     </div>
   </div>
 
+  <!-- Institution 3: SSC -->
   <div class="edu-row">
-    <div class="edu-logo-col"><img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="SSC Logo"></div>
+    <div class="edu-logo-col">
+      <img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="SSC Logo">
+    </div>
     <div class="edu-text-col">
       <h3>Secondary School Certificate (SSC) in Science</h3>
       <p>Sylhet Govt. Pilot High School, Sylhet</p>
