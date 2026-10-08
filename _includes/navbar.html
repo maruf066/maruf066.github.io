@@ -1,6 +1,6 @@
-<!-- _includes/navbar.html -->
+<!-- Navigation Bar -->
 <style>
-    /* Reset default template styling */
+    /* Force the layout */
     nav {
         display: flex !important;
         justify-content: space-between !important;
@@ -9,6 +9,8 @@
         padding: 15px 40px !important;
         border-bottom: 1px solid #ddd !important;
         font-family: Georgia, 'Times New Roman', serif !important; /* Serif font */
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     /* Left Side: Avatar + Name */
@@ -22,11 +24,12 @@
         height: 40px !important;
         border-radius: 50% !important; /* Circular image */
         object-fit: cover !important;
+        display: block !important;
     }
     nav .left a {
         font-size: 1.4rem !important; /* Large name */
         font-weight: bold !important;
-        color: #000 !important;
+        color: #000 !important; /* Black text */
         text-decoration: none !important;
     }
 
@@ -38,7 +41,7 @@
     }
     nav .right.desktop-nav a {
         font-size: 1rem !important;
-        color: #333 !important;
+        color: #333 !important; /* Dark text */
         text-decoration: none !important;
         font-family: Georgia, 'Times New Roman', serif !important;
     }
