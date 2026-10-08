@@ -5,10 +5,8 @@ permalink: /education/
 ---
 
 <style>
-  /* Remove the white line under the title */
-  h1, h2, h3 {
-    border-bottom: none !important;
-  }
+  /* Remove default title lines */
+  h1, h2, h3 { border-bottom: none !important; }
 
   /* Banner Setup */
   .custom-banner {
@@ -20,14 +18,18 @@ permalink: /education/
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
-    margin-top: -20px;
+    margin-top: 0px; /* Changed from -20px to 0px so it touches the top */
+    /* Dark overlay to make the text readable */
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: multiply;
   }
+  
   .custom-banner h1 {
     color: white !important;
     font-size: 3.5rem !important;
     font-weight: normal !important;
     font-family: Georgia, 'Times New Roman', serif !important;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important; /* Makes text readable */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
     margin: 0 !important;
   }
 
@@ -50,7 +52,7 @@ permalink: /education/
   /* Logo Column */
   .edu-logo-col {
     flex-shrink: 0;
-    width: 140px; /* Large logos */
+    width: 140px; 
     display: flex;
     justify-content: center;
   }
@@ -61,21 +63,22 @@ permalink: /education/
   }
 
   /* Text Column */
-  .edu-text-col {
-    flex-grow: 1;
-  }
+  .edu-text-col { flex-grow: 1; }
+  
   .edu-text-col h3 {
     margin: 0 0 10px 0;
     font-size: 1.3rem;
     font-weight: bold;
     color: #000;
   }
+  
   .edu-text-col p {
     margin: 0 0 8px 0;
     font-size: 1.1rem;
     color: #333;
     line-height: 1.5;
   }
+  
   .edu-text-col .date {
     font-style: italic;
     color: #555;
@@ -98,7 +101,7 @@ permalink: /education/
 <!-- The Education Details -->
 <div class="edu-wrapper">
   
-  <!-- Institution 1: CAFUC -->
+  <!-- Institution 1 -->
   <div class="edu-row">
     <div class="edu-logo-col">
       <img src="{{ site.baseurl }}/assets/images/CAFUC LOGO.webp" alt="CAFUC Logo">
@@ -110,7 +113,7 @@ permalink: /education/
     </div>
   </div>
 
-  <!-- Institution 2: SPI -->
+  <!-- Institution 2 -->
   <div class="edu-row">
     <div class="edu-logo-col">
       <img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="SPI Logo">
@@ -122,7 +125,7 @@ permalink: /education/
     </div>
   </div>
 
-  <!-- Institution 3: SSC -->
+  <!-- Institution 3 -->
   <div class="edu-row">
     <div class="edu-logo-col">
       <img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="SSC Logo">
