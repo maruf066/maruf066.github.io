@@ -1,90 +1,64 @@
-<!-- _includes/nav.html -->
+<!-- _includes/navbar.html -->
 <style>
-    /* Navbar Container */
+    /* Reset default template styling */
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-        padding: 15px 40px;
-        background-color: #f8f9fa; /* Light gray background from reference */
-        border-bottom: 1px solid #eaeaea;
-        font-family: 'Georgia', 'Times New Roman', serif; /* Serif font from reference */
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        background-color: #f8f9fa !important; /* Light gray background */
+        padding: 15px 40px !important;
+        border-bottom: 1px solid #ddd !important;
+        font-family: Georgia, 'Times New Roman', serif !important; /* Serif font */
     }
-    
-    /* Left side: Avatar + Name */
+
+    /* Left Side: Avatar + Name */
     nav .left {
-        display: flex;
-        align-items: center;
-        gap: 15px;
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
     }
     nav .left img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%; /* Circular image */
-        object-fit: cover;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important; /* Circular image */
+        object-fit: cover !important;
     }
     nav .left a {
-        font-weight: bold;
-        font-size: 1.4rem; /* Large name */
-        color: #000;
-        text-decoration: none;
-        white-space: nowrap;
+        font-size: 1.4rem !important; /* Large name */
+        font-weight: bold !important;
+        color: #000 !important;
+        text-decoration: none !important;
     }
 
-    /* Right side: Links */
+    /* Right Side: Navigation Links */
     nav .right.desktop-nav {
-        display: flex;
-        align-items: center;
-        gap: 25px;
+        display: flex !important;
+        align-items: center !important;
+        gap: 25px !important;
     }
     nav .right.desktop-nav a {
-        font-size: 1.05rem; /* Slightly larger links */
-        color: #333;
-        text-decoration: none;
-        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1rem !important;
+        color: #333 !important;
+        text-decoration: none !important;
+        font-family: Georgia, 'Times New Roman', serif !important;
     }
     nav .right.desktop-nav a:hover {
-        text-decoration: underline;
-    }
-
-    /* Resume Button styling */
-    nav .right.desktop-nav a[href*="resume"] {
-        border: 1px solid #333;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-weight: bold;
-    }
-
-    .menu-toggle, .mobile-nav { display: none; }
-    
-    /* Mobile */
-    @media (max-width: 900px) {
-        nav { padding: 10px 20px; }
-        .desktop-nav { display: none !important; }
-        .menu-toggle { display: block; }
+        text-decoration: underline !important;
     }
 </style>
 
 <nav>
     <div class="left">
-        <!-- Use your actual avatar image path -->
+        <!-- Your Profile Picture -->
         <img src="{{ site.baseurl }}/assets/images/profile-image/avatar.jpeg" alt="Profile">
         <a href="{{ site.baseurl }}/">MD MARUF AHMED</a>
     </div>
 
-    <!-- Desktop Menu -->
     <div class="right desktop-nav">
         <a href="{{ site.baseurl }}/">Home</a>
         <a href="{{ site.baseurl }}/education/">Education</a>
         <a href="{{ site.baseurl }}/research/">Research</a>
         <a href="{{ site.baseurl }}/projects/">Projects</a>
-        <a href="{{ site.baseurl }}/experiences/">Experience</a>
-        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="{{ site.baseurl }}/experiences/">Experiences</a>
     </div>
-
-    <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fa fa-bars fa-2x"></i>
-    </button>
 </nav>
