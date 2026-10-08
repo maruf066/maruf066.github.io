@@ -1,24 +1,40 @@
 <!-- _includes/navbar.html -->
-<div style="position: absolute; top: 0; left: 0; width: 100%; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-sizing: border-box; background: transparent; font-family: Georgia, 'Times New Roman', serif;">
+{% if page.url == "/" or page.url == "/index.html" %}
+  <!-- HOME PAGE STYLES (Light background, dark text) -->
+  {% assign nav_position = "relative" %}
+  {% assign nav_bg = "#f8f9fa" %}
+  {% assign nav_text = "#000000" %}
+  {% assign nav_link = "#333333" %}
+  {% assign nav_shadow = "none" %}
+  {% assign nav_border = "1px solid #ddd" %}
+{% else %}
+  <!-- OTHER PAGES STYLES (Transparent background, white text) -->
+  {% assign nav_position = "absolute" %}
+  {% assign nav_bg = "rgba(0, 0, 0, 0.6)" %}
+  {% assign nav_text = "#ffffff" %}
+  {% assign nav_link = "#ffffff" %}
+  {% assign nav_shadow = "1px 1px 4px rgba(0,0,0,0.9)" %}
+  {% assign nav_border = "none" %}
+{% endif %}
+
+<div style="position: {{ nav_position }}; top: 0; left: 0; width: 100%; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-sizing: border-box; background: {{ nav_bg }}; border-bottom: {{ nav_border }}; font-family: Georgia, 'Times New Roman', serif;">
     
     <!-- Left Side: Avatar + Name -->
     <div style="display: flex; align-items: center; gap: 15px;">
-        <!-- Make sure this path matches your profile image exactly -->
         <img src="{{ site.baseurl }}/assets/images/profile-image/avatar.jpeg" alt="Profile" style="width: 45px; height: 45px; border-radius: 4px; object-fit: cover; display: block;">
-        <a href="{{ site.baseurl }}/" style="font-size: 1.4rem; font-weight: bold; color: #ffffff; text-decoration: none; text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">
+        <a href="{{ site.baseurl }}/" style="font-size: 1.4rem; font-weight: bold; color: {{ nav_text }}; text-decoration: none; text-shadow: {{ nav_shadow }};">
             MD MARUF AHMED
         </a>
     </div>
 
     <!-- Right Side: Navigation Links -->
     <div style="display: flex; align-items: center; gap: 25px;">
-        <a href="{{ site.baseurl }}/" style="font-size: 1.1rem; color: #ffffff; text-decoration: none; text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">Home</a>
-        <a href="{{ site.baseurl }}/education/" style="font-size: 1.1rem; color: #ffffff; text-decoration: none; text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">Education</a>
-        <a href="{{ site.baseurl }}/research/" style="font-size: 1.1rem; color: #ffffff; text-decoration: none; text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">Research</a>
-        <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem; color: #ffffff; text-decoration: none; text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">Projects</a>
-        <a href="{{ site.baseurl }}/experiences/" style="font-size: 1.1rem; color: #ffffff; text-decoration: none; text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">Experiences</a>
-        <!-- Search Icon -->
-        <i class="fa fa-search" style="color: #ffffff; font-size: 1.1rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.9);"></i>
+        <a href="{{ site.baseurl }}/" style="font-size: 1.1rem; color: {{ nav_link }}; text-decoration: none; text-shadow: {{ nav_shadow }};">Home</a>
+        <a href="{{ site.baseurl }}/education/" style="font-size: 1.1rem; color: {{ nav_link }}; text-decoration: none; text-shadow: {{ nav_shadow }};">Education</a>
+        <a href="{{ site.baseurl }}/research/" style="font-size: 1.1rem; color: {{ nav_link }}; text-decoration: none; text-shadow: {{ nav_shadow }};">Research</a>
+        <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem; color: {{ nav_link }}; text-decoration: none; text-shadow: {{ nav_shadow }};">Projects</a>
+        <a href="{{ site.baseurl }}/experiences/" style="font-size: 1.1rem; color: {{ nav_link }}; text-decoration: none; text-shadow: {{ nav_shadow }};">Experiences</a>
+        <i class="fa fa-search" style="color: {{ nav_link }}; font-size: 1.1rem; text-shadow: {{ nav_shadow }};"></i>
     </div>
 
 </div>
