@@ -1,79 +1,67 @@
-<!-- _includes/nav.html -->
-<style>
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-        padding: 10px 20px;
-    }
-    /* Left side: Avatar + Name */
-    nav .left {
-        display: flex;
-        align-items: center;
-        gap: 12px; /* Space between image and name */
-    }
-    nav .left img {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%; /* Makes the image circular */
-        object-fit: cover;
-    }
-    nav .left a {
-        font-weight: bold;
-        font-size: 1.2rem; /* Slightly smaller to fit nicely next to the image */
-        white-space: nowrap;
-        text-decoration: none;
-        color: inherit;
-    }
-    /* Right side: Links */
-    nav .right.desktop-nav {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        white-space: nowrap;
-    }
-    nav .right.desktop-nav a {
-        font-size: 1rem;
-        text-decoration: none;
-        color: inherit;
-    }
-    .menu-toggle, .mobile-nav { display: none; }
-    @media (max-width: 900px) {
-        .desktop-nav { display: none !important; }
-        .menu-toggle { display: block; }
-    }
-</style>
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
 
-<nav>
-    <div class="left">
-        <!-- Replace 'avatar.jpeg' with the exact name of your profile image -->
-        <img src="{{ site.baseurl }}/assets/images/profile-image/avatar.jpeg" alt="Profile">
-        <a href="{{ site.baseurl }}/">MD MARUF AHMED</a>
-    </div>
+# Main Page Setup
+title: MD MARUF AHMED
+baseurl: "" # Leave this empty since your site is at the root
 
-    <!-- Desktop Menu -->
-    <div class="right desktop-nav">
-        <a href="{{ site.baseurl }}/"><span>Home</span></a>
-        <a href="{{ site.baseurl }}/education/"><span>Education</span></a>
-        <a href="{{ site.baseurl }}/research/"><span>Research</span></a>
-        <a href="{{ site.baseurl }}/projects/"><span>Projects</span></a>
-        <a href="{{ site.baseurl }}/experiences/"><span>Experience</span></a>
-        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer"><span>Resume</span></a>
-    </div>
+# Hero Section
+name: MD MARUF AHMED
+headline: Aerospace Engineering Student
+description: >-
+  Passionate aerospace engineering student with a strong foundation in CAD, prototyping, and design standards.
 
-    <!-- Mobile Menu Button -->
-    <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fa fa-bars fa-2x"></i>
-    </button>
+# Place your profile image in /assets/images/profile-image/folder and edit the file name
+profile_image: ./assets/images/profile-image/avatar.jpeg
 
-    <!-- Mobile Menu -->
-    <div class="mobile-nav">
-        <a href="{{ site.baseurl }}/"><span>Home</span></a>
-        <a href="{{ site.baseurl }}/education/"><span>Education</span></a>
-        <a href="{{ site.baseurl }}/research/"><span>Research</span></a>
-        <a href="{{ site.baseurl }}/projects/"><span>Projects</span></a>
-        <a href="{{ site.baseurl }}/experiences/"><span>Experience</span></a>
-        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer"><span>Resume</span></a>
-    </div>
-</nav>
+# Link your resume
+resume-url: https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing
+
+# Set up external links
+external-links:
+  linkedin: your-linkedin-username
+  github: maruf066
+
+# Skills Section
+skills:
+  - category: 3D Modeling
+    tools:
+    - Onshape
+    - Solidworks
+    - Creo
+    - Fusion 360 (Autodesk)
+    - Siemens NX
+  - category: Prototyping
+    tools:
+    - SLA
+    - CNC
+    - FDM
+    - 3D Printing
+  - category: Problem Solving
+    tools:
+    - Root Cause Analysis
+    - Six Sigma
+
+# Active theme
+colors:
+  text: "#1a1c20"
+  border: "#ddd"
+  link: "#4a76ee"
+  highlight: "#0c0cf2"
+  background: "#ffffff"
+  light_background: "#f3f5fb"
+
+# Build settings
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+include:
+  - _projects
