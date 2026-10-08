@@ -22,12 +22,37 @@ title: Home
     flex: 1;
   }
 
+  /* Name and Social Icons Container */
+  .name-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+
   .home-text h1 {
     font-size: 4rem;
     font-weight: 700;
     color: #000;
-    margin: 0 0 10px 0;
+    margin: 0;
     line-height: 1.1;
+  }
+
+  /* Social Icons Styling */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-icons a {
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #40b3a2; /* Teal color on hover */
   }
 
   .home-text h2 {
@@ -116,6 +141,9 @@ title: Home
       padding: 40px 20px;
       gap: 30px;
     }
+    .name-row {
+      justify-content: center;
+    }
     .home-buttons {
       justify-content: center;
     }
@@ -131,7 +159,18 @@ title: Home
 
 <div class="home-container">
   <div class="home-text">
-    <h1>I'm Maruf</h1>
+    
+    <!-- Name and Social Icons -->
+    <div class="name-row">
+      <h1>I'm MD</h1>
+      <div class="social-icons">
+        <!-- IMPORTANT: Replace '#' with your actual profile links -->
+        <a href="https://linkedin.com/in/your-username" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/maruf066" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://stackoverflow.com/users/your-id" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+      </div>
+    </div>
+
     <h2>Aerospace Engineering Student</h2>
     <p>Passionate aerospace engineering student with a strong foundation in CAD, prototyping, and design standards.</p>
     
