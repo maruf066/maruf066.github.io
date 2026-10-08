@@ -5,128 +5,133 @@ permalink: /education/
 ---
 
 <style>
-  /* The Chalkboard Banner */
-  .page-banner {
+  /* Remove the white line under the title */
+  h1, h2, h3 {
+    border-bottom: none !important;
+  }
+
+  /* Banner Setup */
+  .custom-banner {
     background-image: url('{{ site.baseurl }}/assets/images/education.jpg');
     background-size: cover;
     background-position: center;
-    height: 280px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
     margin-top: -20px;
   }
-  .page-banner h1 {
-    color: white;
-    font-size: 4rem;
-    font-weight: normal;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-    margin: 0;
-    font-family: 'Georgia', 'Times New Roman', serif; /* Serif font from reference */
-    letter-spacing: 1px;
+  .custom-banner h1 {
+    color: white !important;
+    font-size: 3.5rem !important;
+    font-weight: normal !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important; /* Makes text readable */
+    margin: 0 !important;
   }
 
-  /* Education List Setup */
-  .edu-container {
+  /* Content Container */
+  .edu-wrapper {
     max-width: 900px;
-    margin: 0 auto; /* Centers the content */
+    margin: 0 auto;
     padding: 0 20px;
-    font-family: 'Georgia', 'Times New Roman', serif; /* Serif font for all text */
+    font-family: Georgia, 'Times New Roman', serif;
   }
-  
-  .edu-item {
+
+  /* Individual Education Item */
+  .edu-row {
     display: flex;
+    align-items: center;
     gap: 50px;
     margin-bottom: 60px;
-    align-items: center; /* Vertically centers the logo with the text */
   }
-  
-  /* Logo Styling */
-  .edu-logo {
+
+  /* Logo Column */
+  .edu-logo-col {
     flex-shrink: 0;
-    width: 140px; /* Larger logos like the reference */
+    width: 140px; /* Large logos */
     display: flex;
     justify-content: center;
   }
-  .edu-logo img {
+  .edu-logo-col img {
     width: 100%;
     height: auto;
     object-fit: contain;
   }
-  
-  /* Text Styling */
-  .edu-details {
+
+  /* Text Column */
+  .edu-text-col {
     flex-grow: 1;
   }
-  .edu-details h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.3rem; /* Bold degree title */
+  .edu-text-col h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #000;
   }
-  .edu-details p {
-    margin: 0;
-    margin-bottom: 8px;
+  .edu-text-col p {
+    margin: 0 0 8px 0;
     font-size: 1.1rem;
-    line-height: 1.5;
     color: #333;
+    line-height: 1.5;
   }
-  .edu-date {
-    color: #666;
+  .edu-text-col .date {
     font-style: italic;
-    font-size: 1rem;
+    color: #555;
   }
-  
-  /* Mobile */
+
+  /* Mobile Responsive */
   @media (max-width: 600px) {
-    .page-banner { height: 180px; }
-    .page-banner h1 { font-size: 2.5rem; }
-    .edu-item { flex-direction: column; gap: 20px; align-items: center; text-align: center; }
-    .edu-logo { width: 100px; }
+    .custom-banner { height: 180px; }
+    .custom-banner h1 { font-size: 2.5rem !important; }
+    .edu-row { flex-direction: column; gap: 20px; text-align: center; }
+    .edu-logo-col { width: 100px; }
   }
 </style>
 
-<!-- The Banner -->
-<div class="page-banner">
+<!-- The Chalkboard Banner -->
+<div class="custom-banner">
   <h1>Education</h1>
 </div>
 
-<div class="edu-container">
-  <!-- Institution 1 -->
-  <div class="edu-item">
-    <div class="edu-logo">
+<!-- The Education Details -->
+<div class="edu-wrapper">
+  
+  <!-- Institution 1: CAFUC -->
+  <div class="edu-row">
+    <div class="edu-logo-col">
       <img src="{{ site.baseurl }}/assets/images/CAFUC LOGO.webp" alt="CAFUC Logo">
     </div>
-    <div class="edu-details">
+    <div class="edu-text-col">
       <h3>Bachelor of Engineering in Aircraft Manufacturing Engineering</h3>
       <p>Civil Aviation Flight University of China, School of Aviation Engineering</p>
-      <p class="edu-date">Sep 2023 – Jul 2027 (expected)</p>
+      <p class="date">Sep 2023 – Jul 2027 (expected)</p>
     </div>
   </div>
 
-  <!-- Institution 2 -->
-  <div class="edu-item">
-    <div class="edu-logo">
+  <!-- Institution 2: SPI -->
+  <div class="edu-row">
+    <div class="edu-logo-col">
       <img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="SPI Logo">
     </div>
-    <div class="edu-details">
+    <div class="edu-text-col">
       <h3>Diploma in Engineering in Mechanical Engineering</h3>
       <p>Sylhet Polytechnic Institute, Department of Mechanical Engineering</p>
-      <p class="edu-date">Sep 2017 – July 2021</p>
+      <p class="date">Sep 2017 – July 2021</p>
     </div>
   </div>
 
-  <!-- Institution 3 -->
-  <div class="edu-item">
-    <div class="edu-logo">
+  <!-- Institution 3: SSC -->
+  <div class="edu-row">
+    <div class="edu-logo-col">
       <img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="SSC Logo">
     </div>
-    <div class="edu-details">
+    <div class="edu-text-col">
       <h3>Secondary School Certificate (SSC) in Science</h3>
       <p>Sylhet Govt. Pilot High School, Sylhet</p>
-      <p class="edu-date">Passing year: 2017</p>
+      <p class="date">Passing year: 2017</p>
     </div>
   </div>
+
 </div>
