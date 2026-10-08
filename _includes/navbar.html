@@ -10,7 +10,7 @@
 {% else %}
   <!-- OTHER PAGES STYLES (Transparent background, white text) -->
   {% assign nav_position = "absolute" %}
-  {% assign nav_bg = "rgba(0, 0, 0, 0.6)" %}
+  {% assign nav_bg = "transparent" %}
   {% assign nav_text = "#ffffff" %}
   {% assign nav_link = "#ffffff" %}
   {% assign nav_shadow = "1px 1px 4px rgba(0,0,0,0.9)" %}
@@ -19,15 +19,21 @@
 
 <div style="position: {{ nav_position }}; top: 0; left: 0; width: 100%; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-sizing: border-box; background: {{ nav_bg }}; border-bottom: {{ nav_border }}; font-family: Georgia, 'Times New Roman', serif;">
     
-    <!-- Left Side: Avatar + Name -->
+    <!-- ========================================== -->
+    <!-- LEFT SIDE: AVATAR + NAME (Circled in Red 1) -->
+    <!-- ========================================== -->
     <div style="display: flex; align-items: center; gap: 15px;">
+        <!-- This is the profile picture -->
         <img src="{{ site.baseurl }}/assets/images/profile-image/avatar.jpeg" alt="Profile" style="width: 45px; height: 45px; border-radius: 4px; object-fit: cover; display: block;">
+        <!-- This is your name -->
         <a href="{{ site.baseurl }}/" style="font-size: 1.4rem; font-weight: bold; color: {{ nav_text }}; text-decoration: none; text-shadow: {{ nav_shadow }};">
             MD MARUF AHMED
         </a>
     </div>
 
-    <!-- Right Side: Navigation Links -->
+    <!-- ========================================== -->
+    <!-- RIGHT SIDE: NAVIGATION LINKS (Circled in Red 2) -->
+    <!-- ========================================== -->
     <div style="display: flex; align-items: center; gap: 25px;">
         <a href="{{ site.baseurl }}/" style="font-size: 1.1rem; color: {{ nav_link }}; text-decoration: none; text-shadow: {{ nav_shadow }};">Home</a>
         <a href="{{ site.baseurl }}/education/" style="font-size: 1.1rem; color: {{ nav_link }}; text-decoration: none; text-shadow: {{ nav_shadow }};">Education</a>
