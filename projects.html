@@ -39,12 +39,14 @@ permalink: /projects/
   .portfolio-container { max-width: 1000px; margin: 60px auto 0 auto; padding: 0 20px; font-family: 'Poppins', sans-serif; color: #333; }
   .sub-section-title { font-size: 1.8rem; color: #40b3a2; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-top: 50px; margin-bottom: 30px; font-family: Georgia, 'Times New Roman', serif; }
   
+  /* Card Grid for Thesis */
   .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-bottom: 50px; }
   .portfolio-card { border: 1px solid #eaeaea; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
   .portfolio-content { padding: 20px; }
   .portfolio-content h3 { font-size: 1.3rem; font-weight: 600; margin: 0 0 10px 0; color: #000; }
   .tags span { display: inline-block; background-color: #f0f8f7; color: #40b3a2; font-size: 0.8rem; padding: 4px 10px; border-radius: 4px; margin-right: 5px; margin-bottom: 5px; font-weight: 500; }
 
+  /* Accordion Layout for Projects */
   .accordion-container { margin-bottom: 50px; }
   summary.project-title { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eaeaea; font-size: 1.4rem; color: #1a3b5c; text-decoration: underline; text-underline-offset: 4px; font-family: Georgia, 'Times New Roman', serif; transition: color 0.3s ease; }
   summary.project-title:hover { color: #40b3a2; }
@@ -53,12 +55,32 @@ permalink: /projects/
   details[open] summary.project-title::after { transform: rotate(180deg); }
   details[open] summary.project-title { border-bottom: none; }
 
-  .project-content { padding: 20px 0 20px 20px; border-left: 3px solid #40b3a2; margin-left: 5px; margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-size: 1rem; color: #444; line-height: 1.6; }
-  .project-content img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  /* Project Content Styles */
+  .project-content { padding: 20px 0 20px 20px; border-left: 3px solid #40b3a2; margin-left: 5px; margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-size: 1rem; color: #444; line-height: 1.6; overflow: hidden; }
+  
+  /* Small floating image in the corner */
+  .project-content img {
+    float: right;
+    width: 180px; /* Size of the corner image */
+    height: auto;
+    margin: 0 0 15px 20px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Styling for the abstract bullet points */
+  .project-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  .project-content li {
+    margin-bottom: 8px;
+  }
   
   @media (max-width: 600px) {
     .full-width-banner { height: 250px; padding-top: 80px; }
     .full-width-banner h1 { font-size: 2.5rem !important; }
+    .project-content img { float: none; width: 100%; margin: 0 0 15px 0; }
   }
 </style>
 
@@ -81,30 +103,49 @@ permalink: /projects/
 
   <h2 class="sub-section-title">Academic & Personal Projects</h2>
   <div class="accordion-container">
+    
+    <!-- PROJECT 1: YOUR NEW PROJECT -->
     <details>
-      <summary class="project-title">Eco-Friendly Autonomous Medical Equipment Transporter</summary>
+      <summary class="project-title">Boeing 737 Nose Landing Gear Light Bracket: Static, Modal, and Harmonic Response Analysis</summary>
       <div class="project-content">
-        <p>Here is where you describe the project. You can explain the problem, your design process, the tools you used (e.g., SolidWorks, Arduino), and the outcome.</p>
-        <img src="{{ site.baseurl }}/assets/images/project1.jpg" alt="Eco-Friendly Transporter">
+        <!-- Replace 'project1.jpg' with your actual image name -->
+        <img src="{{ site.baseurl }}/assets/images/project1.jpg" alt="Boeing 737 Light Bracket Analysis">
+        
+        <p>This project presents a comprehensive finite element analysis of a Boeing 737 nose landing gear light bracket using COMSOL Multiphysics. The geometry was based on dimensional measurements taken from the actual aircraft and modeled in Aluminum 7075-T6.</p>
+        
+        <p><strong>Three analyses were performed:</strong></p>
+        <ul>
+          <li><strong>Static:</strong> Under a 500 N load, the maximum von Mises stress was 120.3 MPa with a safety factor of 4.2, and the maximum displacement was 0.2 mm. The equilibrium error was 0%.</li>
+          <li><strong>Modal:</strong> The first six natural frequencies ranged from 353.13 Hz to 985.35 Hz, all safely above typical aircraft vibration levels.</li>
+          <li><strong>Harmonic:</strong> With 2% damping, a 1–300 Hz sweep showed no resonance peaks, confirming dynamic stability.</li>
+        </ul>
       </div>
     </details>
 
+    <!-- PROJECT 2 -->
     <details>
       <summary class="project-title">Regenerative Braking: Storing the back emf of a BLDC motor using PWM signal</summary>
       <div class="project-content">
-        <p>Describe the methodology and how you built this system here. Mention specific hardware and software components.</p>
         <img src="{{ site.baseurl }}/assets/images/project2.jpg" alt="Regenerative Braking">
+        <p>Describe the methodology and how you built this system here in a short abstract.</p>
       </div>
     </details>
 
+    <!-- PROJECT 3 -->
     <details>
       <summary class="project-title">Drowsiness Detection and Warning System for Security Guards of BUET</summary>
-      <div class="project-content"><p>Detail your role in this project, the coding languages used, and the results.</p></div>
+      <div class="project-content">
+        <p>Detail your role in this project and the results in a short abstract.</p>
+      </div>
     </details>
 
+    <!-- PROJECT 4 -->
     <details>
       <summary class="project-title">Password Based Bank Vault Security System</summary>
-      <div class="project-content"><p>Explain the security features implemented and the circuit design.</p></div>
+      <div class="project-content">
+        <p>Explain the security features implemented and the circuit design in a short abstract.</p>
+      </div>
     </details>
+
   </div>
 </div>
