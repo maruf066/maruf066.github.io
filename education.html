@@ -5,25 +5,48 @@ permalink: /education/
 ---
 
 <style>
+  /* NEW: Banner Styles */
+  .page-banner {
+    /* Changed to match your exact file name 'education.jpg' */
+    background-image: url('{{ site.baseurl }}/assets/images/education.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px; /* Adjust the height of the banner here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: -20px; /* Pulls the banner up slightly to touch the navbar */
+  }
+  .page-banner h1 {
+    color: white;
+    font-size: 3rem; /* Size of the "Education" text */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Makes the text readable over the image */
+    margin: 0;
+    font-family: Georgia, serif; /* Matches the font from your reference image */
+  }
+
+  /* Existing Education Styles */
   .edu-container {
     margin-top: 20px;
   }
   .edu-item {
     display: flex;
-    gap: 40px; /* Space between logo and text */
-    margin-bottom: 45px; /* Space between each institution */
+    gap: 40px;
+    margin-bottom: 45px;
     align-items: flex-start;
   }
   .edu-logo {
     flex-shrink: 0;
-    width: 100px; /* Adjusted size for a cleaner look */
+    width: 100px;
     display: flex;
     justify-content: center;
   }
   .edu-logo img {
     width: 100%;
     height: auto;
-    object-fit: contain; /* Prevents logos from stretching */
+    object-fit: contain;
   }
   .edu-details {
     flex-grow: 1;
@@ -32,7 +55,7 @@ permalink: /education/
   .edu-details h3 {
     margin-top: 0;
     margin-bottom: 8px;
-    font-size: 1.15rem; /* Degree name */
+    font-size: 1.15rem;
     font-weight: bold;
   }
   .edu-details p {
@@ -49,6 +72,8 @@ permalink: /education/
   
   /* Mobile responsiveness */
   @media (max-width: 600px) {
+    .page-banner { height: 150px; }
+    .page-banner h1 { font-size: 2rem; }
     .edu-item {
       flex-direction: column;
       gap: 15px;
@@ -61,7 +86,10 @@ permalink: /education/
   }
 </style>
 
-<h1>Education</h1>
+<!-- The Banner Section -->
+<div class="page-banner">
+  <h1>Education</h1>
+</div>
 
 <div class="edu-container">
 
@@ -92,7 +120,6 @@ permalink: /education/
   <!-- Institution 3: SSC (High School) -->
   <div class="edu-item">
     <div class="edu-logo">
-      <!-- Updated to use your 'MODEL LOGO.jpg' file -->
       <img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="SSC Logo">
     </div>
     <div class="edu-details">
