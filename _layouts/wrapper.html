@@ -24,8 +24,8 @@
           <div style="display: flex !important; align-items: center !important; gap: 25px !important;">
               <a href="{{ site.baseurl }}/" style="font-size: 1.1rem !important; color: #333333 !important; text-decoration: none !important;">Home</a>
               <a href="{{ site.baseurl }}/education/" style="font-size: 1.1rem !important; color: #333333 !important; text-decoration: none !important;">Education</a>
-              <a href="{{ site.baseurl }}/research/" style="font-size: 1.1rem !important; color: #333333 !important; text-decoration: none !important;">Research</a>
-              <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem !important; color: #333333 !important; text-decoration: none !important;">Projects</a>
+              <!-- Research link removed, Projects renamed -->
+              <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem !important; color: #333333 !important; text-decoration: none !important;">Projects & Research</a>
               <a href="{{ site.baseurl }}/experiences/" style="font-size: 1.1rem !important; color: #333333 !important; text-decoration: none !important;">Experiences</a>
               <!-- Resume Button -->
               <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer" style="font-size: 1rem !important; color: #40b3a2 !important; text-decoration: none !important; border: 2px solid #40b3a2 !important; padding: 6px 18px !important; border-radius: 8px !important; font-weight: 600 !important;">Resume</a>
@@ -42,8 +42,8 @@
           <div style="display: flex !important; align-items: center !important; gap: 25px !important;">
               <a href="{{ site.baseurl }}/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;">Home</a>
               <a href="{{ site.baseurl }}/education/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;">Education</a>
-              <a href="{{ site.baseurl }}/research/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;">Research</a>
-              <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;">Projects</a>
+              <!-- Research link removed, Projects renamed -->
+              <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;">Projects & Research</a>
               <a href="{{ site.baseurl }}/experiences/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important; text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;">Experiences</a>
           </div>
       </div>
@@ -59,9 +59,8 @@
               <a href="{{ site.baseurl }}/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important;">Home</a>
               <a href="{{ site.baseurl }}/education/" style="font-size: 1.1rem !important; color: #ffffff !important; text-decoration: none !important;">Education</a>
               
-              <a href="{{ site.baseurl }}/research/" style="font-size: 1.1rem !important; color: {% if page.url contains '/research/' %}#87CEEB{% else %}#ffffff{% endif %} !important; text-decoration: none !important;">Research</a>
-              
-              <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem !important; color: {% if page.url contains '/projects/' %}#87CEEB{% else %}#ffffff{% endif %} !important; text-decoration: none !important;">Projects</a>
+              <!-- Research link removed. Projects renamed with updated highlight logic -->
+              <a href="{{ site.baseurl }}/projects/" style="font-size: 1.1rem !important; color: {% if page.url contains '/projects/' or page.url contains '/research/' %}#87CEEB{% else %}#ffffff{% endif %} !important; text-decoration: none !important;">Projects & Research</a>
               
               <a href="{{ site.baseurl }}/experiences/" style="font-size: 1.1rem !important; color: {% if page.url contains '/experiences/' %}#87CEEB{% else %}#ffffff{% endif %} !important; text-decoration: none !important;">Experiences</a>
           </div>
