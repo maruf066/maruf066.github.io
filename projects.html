@@ -5,190 +5,106 @@ permalink: /projects/
 ---
 
 <style>
-  .portfolio-container {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 0 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
+  /* Full Width Banner */
+  .full-width-banner {
+    background-image: url('{{ site.baseurl }}/assets/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+  }
+  
+  .full-width-banner h1 {
+    color: white !important;
+    font-size: 4rem !important;
+    font-weight: normal !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    text-shadow: 2px 2px 10px rgba(0,0,0,1) !important;
+    margin: 0 !important;
+    border-bottom: none !important;
   }
 
-  .section-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #000;
-    text-align: left;
-    margin-bottom: 40px;
-  }
-
-  .sub-section-title {
-    font-size: 1.8rem;
-    color: #40b3a2; /* Teal color */
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-  }
-
-  /* --- Styles for the Card Grid (Kept for the Thesis section) --- */
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-  }
-  .portfolio-card {
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  }
+  .portfolio-container { max-width: 1000px; margin: 60px auto 0 auto; padding: 0 20px; font-family: 'Poppins', sans-serif; color: #333; }
+  .sub-section-title { font-size: 1.8rem; color: #40b3a2; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; margin-top: 50px; margin-bottom: 30px; font-family: Georgia, 'Times New Roman', serif; }
+  
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-bottom: 50px; }
+  .portfolio-card { border: 1px solid #eaeaea; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
   .portfolio-content { padding: 20px; }
   .portfolio-content h3 { font-size: 1.3rem; font-weight: 600; margin: 0 0 10px 0; color: #000; }
-  .tags span {
-    display: inline-block; background-color: #f0f8f7; color: #40b3a2;
-    font-size: 0.8rem; padding: 4px 10px; border-radius: 4px;
-    margin-right: 5px; margin-bottom: 5px; font-weight: 500;
-  }
+  .tags span { display: inline-block; background-color: #f0f8f7; color: #40b3a2; font-size: 0.8rem; padding: 4px 10px; border-radius: 4px; margin-right: 5px; margin-bottom: 5px; font-weight: 500; }
 
-  /* --- NEW: Styles for the Accordion Layout --- */
-  .accordion-container {
-    margin-bottom: 50px;
-  }
-  
-  /* The clickable title */
-  summary.project-title {
-    list-style: none; /* Hide default triangle */
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #eaeaea;
-    font-size: 1.4rem;
-    color: #1a3b5c; /* Dark blue */
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    font-family: Georgia, 'Times New Roman', serif;
-    transition: color 0.3s ease;
-  }
-  
-  summary.project-title:hover {
-    color: #40b3a2; /* Teal on hover */
-  }
-  
-  /* Hide default arrow in Safari */
-  summary.project-title::-webkit-details-marker {
-    display: none;
-  }
-  
-  /* Custom Chevron Arrow */
-  summary.project-title::after {
-    content: "\f078"; /* FontAwesome chevron-down */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1rem;
-    color: #666;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Rotate arrow when open */
-  details[open] summary.project-title::after {
-    transform: rotate(180deg);
-  }
-  
-  details[open] summary.project-title {
-    border-bottom: none;
-  }
+  .accordion-container { margin-bottom: 50px; }
+  summary.project-title { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eaeaea; font-size: 1.4rem; color: #1a3b5c; text-decoration: underline; text-underline-offset: 4px; font-family: Georgia, 'Times New Roman', serif; transition: color 0.3s ease; }
+  summary.project-title:hover { color: #40b3a2; }
+  summary.project-title::-webkit-details-marker { display: none; }
+  summary.project-title::after { content: "\f078"; font-family: "Font Awesome 5 Free"; font-weight: 900; font-size: 1rem; color: #666; transition: transform 0.3s ease; }
+  details[open] summary.project-title::after { transform: rotate(180deg); }
+  details[open] summary.project-title { border-bottom: none; }
 
-  /* The expanded content */
-  .project-content {
-    padding: 20px 0 20px 20px;
-    border-left: 3px solid #40b3a2; /* Teal accent line */
-    margin-left: 5px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-  }
-
-  .project-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  .project-content { padding: 20px 0 20px 20px; border-left: 3px solid #40b3a2; margin-left: 5px; margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-size: 1rem; color: #444; line-height: 1.6; }
+  .project-content img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  
+  @media (max-width: 600px) {
+    .full-width-banner { height: 250px; padding-top: 80px; }
+    .full-width-banner h1 { font-size: 2.5rem !important; }
   }
 </style>
 
-<div class="portfolio-container">
-  
-  <h1 class="section-title">Projects & Research</h1>
+<div class="full-width-banner">
+  <h1>Projects & Research</h1>
+</div>
 
-  <!-- ============================== -->
-  <!-- SECTION 1: RESEARCH            -->
-  <!-- ============================== -->
+<div class="portfolio-container">
   <h2 class="sub-section-title">Undergraduate Thesis / Research</h2>
-  
   <div class="portfolio-grid">
     <div class="portfolio-card">
       <div class="portfolio-content">
         <h3>[Your Thesis Title Will Go Here]</h3>
-        <div class="tags">
-          <span>Aerodynamics</span>
-          <span>Propulsion</span>
-        </div>
-        <p>This section is currently under development. I will be completing my undergraduate thesis in my final semester (Expected 2027). The research will focus on [Insert your specific aerospace interests here].</p>
+        <div class="tags"><span>Aerodynamics</span><span>Propulsion</span></div>
+        <p>This section is currently under development. I will be completing my undergraduate thesis in my final semester (Expected 2027).</p>
         <p><strong>Supervised by:</strong> To be determined</p>
       </div>
     </div>
   </div>
 
-  <!-- ============================== -->
-  <!-- SECTION 2: PROJECTS (ACCORDION)-->
-  <!-- ============================== -->
   <h2 class="sub-section-title">Academic & Personal Projects</h2>
-
   <div class="accordion-container">
-    
-    <!-- Project 1 -->
     <details>
       <summary class="project-title">Eco-Friendly Autonomous Medical Equipment Transporter</summary>
       <div class="project-content">
         <p>Here is where you describe the project. You can explain the problem, your design process, the tools you used (e.g., SolidWorks, Arduino), and the outcome.</p>
-        <!-- Replace with your own image URL -->
-        <img src="{{ site.baseurl }}/assets/images/MODEL LOGO.jpg" alt="Eco-Friendly Transporter">
-        <p>You can add more text after the image as well.</p>
+        <img src="{{ site.baseurl }}/assets/images/project1.jpg" alt="Eco-Friendly Transporter">
       </div>
     </details>
 
-    <!-- Project 2 -->
     <details>
       <summary class="project-title">Regenerative Braking: Storing the back emf of a BLDC motor using PWM signal</summary>
       <div class="project-content">
         <p>Describe the methodology and how you built this system here. Mention specific hardware and software components.</p>
-        <img src="{{ site.baseurl }}/assets/images/SPI LOGO.jpg" alt="Regenerative Braking">
+        <img src="{{ site.baseurl }}/assets/images/project2.jpg" alt="Regenerative Braking">
       </div>
     </details>
 
-    <!-- Project 3 -->
     <details>
       <summary class="project-title">Drowsiness Detection and Warning System for Security Guards of BUET</summary>
-      <div class="project-content">
-        <p>Detail your role in this project, the coding languages used (e.g., Python, OpenCV), and the results.</p>
-      </div>
+      <div class="project-content"><p>Detail your role in this project, the coding languages used, and the results.</p></div>
     </details>
 
-    <!-- Project 4 -->
     <details>
       <summary class="project-title">Password Based Bank Vault Security System</summary>
-      <div class="project-content">
-        <p>Explain the security features implemented and the circuit design.</p>
-      </div>
+      <div class="project-content"><p>Explain the security features implemented and the circuit design.</p></div>
     </details>
-
   </div>
-
 </div>
