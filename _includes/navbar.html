@@ -1,32 +1,66 @@
 <!-- _includes/nav.html -->
 <style>
+    /* Navbar Container */
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        padding: 10px 20px;
+        padding: 15px 40px;
+        background-color: #f8f9fa; /* Light gray background from reference */
+        border-bottom: 1px solid #eaeaea;
+        font-family: 'Georgia', 'Times New Roman', serif; /* Serif font from reference */
+    }
+    
+    /* Left side: Avatar + Name */
+    nav .left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    nav .left img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; /* Circular image */
+        object-fit: cover;
     }
     nav .left a {
         font-weight: bold;
-        font-size: 1.4rem; /* Your name size */
-        white-space: nowrap;
+        font-size: 1.4rem; /* Large name */
+        color: #000;
         text-decoration: none;
-        color: inherit;
+        white-space: nowrap;
     }
+
+    /* Right side: Links */
     nav .right.desktop-nav {
         display: flex;
         align-items: center;
-        gap: 15px; /* Space between links */
-        white-space: nowrap;
+        gap: 25px;
     }
     nav .right.desktop-nav a {
-        font-size: 1rem; /* Link size */
+        font-size: 1.05rem; /* Slightly larger links */
+        color: #333;
         text-decoration: none;
-        color: inherit;
+        font-family: 'Georgia', 'Times New Roman', serif;
     }
+    nav .right.desktop-nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Resume Button styling */
+    nav .right.desktop-nav a[href*="resume"] {
+        border: 1px solid #333;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+
     .menu-toggle, .mobile-nav { display: none; }
+    
+    /* Mobile */
     @media (max-width: 900px) {
+        nav { padding: 10px 20px; }
         .desktop-nav { display: none !important; }
         .menu-toggle { display: block; }
     }
@@ -34,31 +68,23 @@
 
 <nav>
     <div class="left">
-        <a href="{{ site.baseurl }}/">{{site.name}}</a>
+        <!-- Use your actual avatar image path -->
+        <img src="{{ site.baseurl }}/assets/images/profile-image/avatar.jpeg" alt="Profile">
+        <a href="{{ site.baseurl }}/">MD MARUF AHMED</a>
     </div>
 
     <!-- Desktop Menu -->
     <div class="right desktop-nav">
-        <a href="{{ site.baseurl }}/"><span>Home</span></a>
-        <a href="{{ site.baseurl }}/education/"><span>Education</span></a>
-        <a href="{{ site.baseurl }}/research/"><span>Research</span></a>
-        <a href="{{ site.baseurl }}/projects/"><span>Projects</span></a>
-        <a href="{{ site.baseurl }}/experiences/"><span>Experience</span></a>
-        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer"><span>Resume</span></a>
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/education/">Education</a>
+        <a href="{{ site.baseurl }}/research/">Research</a>
+        <a href="{{ site.baseurl }}/projects/">Projects</a>
+        <a href="{{ site.baseurl }}/experiences/">Experience</a>
+        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer">Resume</a>
     </div>
 
     <!-- Mobile Menu Button -->
     <button class="menu-toggle" aria-label="Toggle menu">
         <i class="fa fa-bars fa-2x"></i>
     </button>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-nav">
-        <a href="{{ site.baseurl }}/"><span>Home</span></a>
-        <a href="{{ site.baseurl }}/education/"><span>Education</span></a>
-        <a href="{{ site.baseurl }}/research/"><span>Research</span></a>
-        <a href="{{ site.baseurl }}/projects/"><span>Projects</span></a>
-        <a href="{{ site.baseurl }}/experiences/"><span>Experience</span></a>
-        <a href="{{site.resume-url}}" target="_blank" rel="noopener noreferrer"><span>Resume</span></a>
-    </div>
 </nav>
