@@ -77,6 +77,23 @@ permalink: /projects/
     margin-bottom: 8px;
   }
   
+  /* Styling for the Project Overview Link */
+  .project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #40b3a2;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #40b3a2;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .project-link:hover {
+    background-color: #40b3a2;
+    color: #ffffff;
+  }
+  
   @media (max-width: 600px) {
     .full-width-banner { height: 250px; padding-top: 80px; }
     .full-width-banner h1 { font-size: 2.5rem !important; }
@@ -104,7 +121,7 @@ permalink: /projects/
   <h2 class="sub-section-title">Academic & Personal Projects</h2>
   <div class="accordion-container">
     
-    <!-- PROJECT 1: KEEPING YOUR BOEING 737 PROJECT -->
+    <!-- PROJECT 1 (Keep as is) -->
     <details>
       <summary class="project-title">Boeing 737 Nose Landing Gear Light Bracket: Static, Modal, and Harmonic Response Analysis</summary>
       <div class="project-content">
@@ -116,10 +133,11 @@ permalink: /projects/
           <li><strong>Modal:</strong> The first six natural frequencies ranged from 353.13 Hz to 985.35 Hz, all safely above typical aircraft vibration levels.</li>
           <li><strong>Harmonic:</strong> With 2% damping, a 1–300 Hz sweep showed no resonance peaks, confirming dynamic stability.</li>
         </ul>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
-    <!-- PROJECT 2: KEEPING YOUR NACA 0012 PROJECT -->
+    <!-- PROJECT 2 (Keep as is) -->
     <details>
       <summary class="project-title">Subsonic Flow Field Analysis of a NACA 0012 Swept Wing</summary>
       <div class="project-content">
@@ -132,6 +150,7 @@ permalink: /projects/
           <li>Evaluate the aerodynamic coefficients (lift and drag).</li>
           <li>Numerical results are validated against published experimental data for the NACA 0012 airfoil.</li>
         </ul>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -139,7 +158,15 @@ permalink: /projects/
     <details>
       <summary class="project-title">Drowsiness Detection and Warning System for Security Guards of BUET</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project3.jpg" alt="Drowsiness Detection System">
+        <p>This project focuses on developing an automated safety system to prevent accidents caused by fatigue among security personnel. Using computer vision and machine learning algorithms, the system monitors eye movement and facial landmarks in real-time to detect signs of drowsiness.</p>
+        <p>Upon detecting drowsiness, the system triggers an audible alarm to alert the guard, ensuring continuous vigilance and safety.</p>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+          <li>Implemented facial landmark detection using Python and OpenCV.</li>
+          <li>Developed the drowsiness detection algorithm based on Eye Aspect Ratio (EAR).</li>
+        </ul>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -147,7 +174,15 @@ permalink: /projects/
     <details>
       <summary class="project-title">Password Based Bank Vault Security System</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project4.jpg" alt="Bank Vault Security System">
+        <p>This project involved the design and implementation of a secure, password-based access control system for a simulated bank vault. The system utilizes a microcontroller, a matrix keypad, and an LCD display to authenticate users before granting access.</p>
+        <p>Security features include password masking, incorrect attempt lockout, and an alarm system triggered by tampering.</p>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+          <li>Designed the circuit schematic and implemented the embedded C++ code.</li>
+          <li>Integrated hardware components for reliable authentication.</li>
+        </ul>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -155,7 +190,10 @@ permalink: /projects/
     <details>
       <summary class="project-title">NACA 4421 Airfoil — Slot and Groove Study</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project5.jpg" alt="NACA 4421 Airfoil Study">
+        <p>This independent project investigates the aerodynamic impact of slot and groove modifications on a NACA 4421 airfoil. Using ANSYS Fluent, computational fluid dynamics (CFD) simulations are performed to analyze variations in lift, drag, and overall flow behavior over the modified airfoil surfaces.</p>
+        <p>The study aims to determine whether these passive flow control mechanisms can effectively delay boundary layer separation and improve aerodynamic efficiency.</p>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -163,7 +201,11 @@ permalink: /projects/
     <details>
       <summary class="project-title">A2 — Autonomous UAV for Obstacle Avoidance and Payload Delivery</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project6.jpg" alt="Autonomous UAV">
+        <p>A collaborative team project focused on the design, development, and testing of an autonomous Unmanned Aerial Vehicle (UAV). The primary objective was to enable reliable obstacle detection, avoidance, and precise payload delivery in complex environments.</p>
+        <p>My role involved integrating software components for navigation and computer vision. The team's innovative design and performance resulted in multiple national and provincial competition awards.</p>
+        <p><strong>Technologies Used:</strong> Python, ROS, YOLO, UAV Hardware</p>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -171,7 +213,10 @@ permalink: /projects/
     <details>
       <summary class="project-title">Supersonic Aerodynamic Analysis of the ONERA M6 Wing</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project7.jpg" alt="ONERA M6 Wing Analysis">
+        <p>This ongoing independent project investigates supersonic flow characteristics over the ONERA M6 wing to assess its aerodynamic performance. The analysis focuses on evaluating flow-field parameters, pressure distributions, and shock wave formations at high Mach numbers.</p>
+        <p>The results aim to provide a deeper understanding of transonic and supersonic wing behavior.</p>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -179,7 +224,10 @@ permalink: /projects/
     <details>
       <summary class="project-title">Learning Log — Django Web Application</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project8.jpg" alt="Learning Log Web App">
+        <p>As the Team Leader for this course project, I developed a full-stack web application designed to help users track their daily learning progress. The platform features robust user account functionality, a clean and responsive frontend interface, and a dynamic backend to manage entries.</p>
+        <p><strong>Technologies Used:</strong> Python, Django, Bootstrap 5, HTML/CSS</p>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -187,7 +235,10 @@ permalink: /projects/
     <details>
       <summary class="project-title">Gear Reducer Design</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project9.jpg" alt="Gear Reducer Design">
+        <p>This academic mechanical design project involved the complete engineering process of developing a gear reducer. Key tasks included motor selection, transmission-ratio calculations, V-belt sizing, and detailed gear design based on contact fatigue strength criteria.</p>
+        <p>The final design was evaluated for efficiency, durability, and compliance with engineering standards.</p>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -195,7 +246,10 @@ permalink: /projects/
     <details>
       <summary class="project-title">Aircraft Landing Gear Systems</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project10.jpg" alt="Aircraft Landing Gear Systems">
+        <p>As the Team Leader, I co-developed and delivered a comprehensive technical presentation on aircraft landing gear systems. The presentation detailed various landing gear types, their operating principles, and the specific functions of key structural components.</p>
+        <p>The project required extensive research into aircraft systems and culminated in a team presentation to peers and faculty.</p>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
@@ -203,7 +257,9 @@ permalink: /projects/
     <details>
       <summary class="project-title">Table Lamp Mechanism — Kinematic and DOF Analysis</summary>
       <div class="project-content">
-        <!-- Abstract and image will go here later -->
+        <img src="{{ site.baseurl }}/assets/images/project11.jpg" alt="Table Lamp Kinematic Analysis">
+        <p>This academic case study involved a detailed kinematic analysis of an adjustable table lamp. I developed a kinematic diagram to represent the mechanism and analyzed its degrees of freedom (DOF) to mathematically explain the lamp's range of motion and structural constraints.</p>
+        <p><a href="#" class="project-link" target="_blank">Project Overview</a></p>
       </div>
     </details>
 
